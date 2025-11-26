@@ -309,5 +309,17 @@ body {
 	margin-top: 16px;
 	text-align: center;
 	text-decoration: none;
+	width: 432px;
 
+}
+
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+.dummy {
+	height: 15px;
 }

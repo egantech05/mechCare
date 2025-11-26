@@ -8,52 +8,52 @@
 <body>
     <header class="mainTitle">
         <text>
-            MECHCARE
+            MACHCARE
         </text>
     </header>
 
-    <div class="navigationRow">
-        <a href="index.html" style="text-decoration: none;">
-            <div class="navButton">
-                <div class="navButtonComponents">
-                    <img src="img/dashboard.svg" />
-                    <text class="navText"> Dashboard</text>
-                </div>
-            </div>
-        </a>
-        <a href="equipmentPage.html" style="text-decoration: none;">
-            <div class="navButton">
-                <div class="navButtonComponents">
-                    <img src="img/equipment.svg" />
-                    <text class="navText"> Equipment</text>
-                </div>
-            </div>
-        </a>
-        <a href="activitiesPage.html" style="text-decoration: none;">
-            <div class="navButton">
-                <div>
-                    <img src="img/activities.svg" />
-                    <text class="navText"> Activities</text>
-                </div>
-            </div>
-        </a>
-        <a href="createLogPage.html" style="text-decoration: none;">
-            <div class="navButton">
-                <div>
-                    <img src="img/create-log.svg" />
-                    <text class="navText"> Create Log</text>
-                </div>
-            </div>
-        </a>
-        <a href="createEquipmentPage.html" style="text-decoration: none;">
-            <div class="navButton">
-                <div>
-                    <img src="img/create-equipment.svg" />
-                    <text class="navText"> Create Equipment</text>
-                </div>
-            </div>
-        </a>
-    </div>
+	<div class="navigationRow">
+		<a href="index.php" style="text-decoration: none;">
+			<div class="navButton">
+				<div class="navButtonComponents">
+					<img src="img/dashboard.svg" />
+					<div class="navText"> Dashboard</div>
+				</div>
+			</div>
+		</a>
+		<a href="equipmentPage.php" style="text-decoration: none;">
+			<div class="navButton">
+				<div class="navButtonComponents">
+					<img src="img/equipment.svg" />
+					<div class="navText"> Equipment</div>
+				</div>
+			</div>
+		</a>
+		<a href="activitiesPage.php" style="text-decoration: none;">
+			<div class="navButton">
+				<div>
+					<img src="img/activities.svg" />
+					<div class="navText"> Activities</div>
+				</div>
+			</div>
+		</a>
+		<a href="createLogPage.php" style="text-decoration: none;">
+			<div class="navButton">
+				<div>
+					<img src="img/create-log.svg" />
+					<div class="navText"> Create Log</div>
+				</div>
+			</div>
+		</a>
+		<a href="createEquipmentPage.php" style="text-decoration: none;">
+			<div class="navButton">
+				<div>
+					<img src="img/create-equipment.svg" />
+					<div class="navText"> Create Equipment</div>
+				</div>
+			</div>
+		</a>
+	</div>
 
     <div class="content">
         <div class="pageTitle">New Log</div>
