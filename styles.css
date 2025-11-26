@@ -1,0 +1,160 @@
+body {
+	background-color: #1E1E1E;
+	font-family: sans-serif;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+
+}
+
+.mainTitle {
+	background-color: #1E1E1E;
+	padding: 16px;
+	color: #31FFD2;
+	font-size: 32px;
+	font-weight: bold;
+
+}
+
+.navigationRow {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	padding: 10px;
+
+}
+
+.navButton {
+	display: flex;
+	align-items: center;
+	background-color: #D9D9D9;
+	padding: 30px;
+	border-radius: 16px;
+	height: 100px;
+	width: 100px;
+	margin: 8px;
+	text-align: center;
+
+}
+
+.navButton:hover {
+	background-color: #31FFD2;
+}
+
+.navText {
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #1E1E1E;
+
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	padding: 8px;
+	color: white;
+	border: 1px solid white;
+}
+
+.pageTitle {
+	font-size: 24px;
+}
+
+.dashboard {
+	display: flex;
+
+}
+
+.section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.subSection {
+	background-color: #D9D9D9;
+	border-radius: 16px;
+	color: #1E1E1E;
+	height: 600px;
+	margin: 8px;
+	padding: 16px;
+	overflow: hidden;
+
+}
+
+.subSectionTitle {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+.equipmentList {
+	overflow: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	height: 550px;
+	flex: 1;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.equipmentCard {
+	width: 150px;
+	height: 200px;
+	margin: 4px;
+	border-radius: 16px;
+	background-color: #1E1E1E;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: white;
+	gap: 4px;
+
+}
+
+.equipmentCard img {
+	height: 40%;
+	margin-bottom: 16px;
+}
+
+.equipmentName {
+	color: #31FFD2;
+}
+
+.equipmentSubText {
+	font-size: 12px;
+	color: gray;
+}
+
+.recentLogList {
+	height: 550px;
+	flex: 1;
+	flex-direction: column;
+	overflow: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.recentLogCard {
+	background-color: #1E1E1E;
+	height: 80px;
+	border-radius: 16px;
+	margin: 8px;
+	padding: 16px;
+	color: white;
+
+}
+
+.logDetails {
+	justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+}
+
+.logRight {
+	text-align: right;
+}
