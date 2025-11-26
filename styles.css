@@ -55,7 +55,6 @@ body {
 	flex-direction: column;
 	padding: 8px;
 	color: white;
-	border: 1px solid white;
 }
 
 .pageTitle {
@@ -185,6 +184,44 @@ body {
 	overflow: hidden;
 }
 
+.infoLabel {
+	color: gray;
+	font-size: 12px;
+}
+
+.infoValue {
+	font-size: 16px;
+
+}
+
+.infoBox {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+
+
+.eqCard {
+	margin: 4px;
+	border-radius: 16px;
+	background-color: #1E1E1E;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+	color: white;
+	gap: 4px;
+	padding-left: 32px;
+	padding-right: 32px;
+
+}
+
+.eqCard img {
+	margin: 16px;
+	width: 50px;
+}
+
 /*acitivities page*/
 
 .filterBox {
@@ -260,4 +297,17 @@ body {
 	font-size: 16px;
 	padding: 16px;
 	width: 400px;
+}
+
+
+.submitButton {
+	display: block;
+	background-color: #31FFD2;
+	color: #1E1E1E;
+	padding: 16px 4px 16px 4px;
+	border-radius: 16px;
+	margin-top: 16px;
+	text-align: center;
+	text-decoration: none;
+
 }
