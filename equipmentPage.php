@@ -22,7 +22,7 @@ if ($search !== ''){
 
 <head>
     <meta charset="utf-8">
-    <title>MachCare</title>
+    <title>EQARE</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -30,7 +30,7 @@ if ($search !== ''){
 
     <header class="mainTitle">
         <div>
-            MACHCARE
+            EQARE
         </div>
     </header>
 

@@ -2,6 +2,10 @@
 require_once 'dbConnection.php'; 
      $logList =  $conn->query("SELECT * FROM logDB ORDER by date DESC;");
 
+     $typeList = $conn->query("SELECT DISTINCT type FROM equipmentDB ");
+
+     $reportedList = $conn->query("SELECT DISTINCT reported FROM logDB");
+
 ?>
 
 
@@ -15,7 +19,7 @@ require_once 'dbConnection.php';
 <body>
     <header class="mainTitle">
         <div>
-            MACHCARE
+            EQARE
         </div>
     </header>
 
@@ -70,9 +74,17 @@ require_once 'dbConnection.php';
                     <div class="filterComponent">
                         <div class="filterTitle">Type</div>
                         <div class="filterSelector">
-                            <select>
-                                <option>1</option>
-                                <option>2</option>
+                            <select name="type">
+<?php 
+    foreach($typeList as $row){
+?>
+                            <option value="<?=$row['type']?>">
+                                <?= $row['type'] ?>
+                            </option>
+<?php
+    }
+?>
+                              
                             </select>
                         </div>
                     </div>
@@ -110,7 +122,17 @@ require_once 'dbConnection.php';
                     <div class="filterComponent">
                         <div class="filterTitle">Reported by</div>
                         <div class="filterSelector">
-                            <select></select>
+                            <select name="reported">
+<?php 
+    foreach($reportedList as $row){
+?>
+                            <option value="<?=$row['reported']?>">
+                                <?= $row['reported'] ?>
+                            </option>
+<?php
+    }
+?>
+                            </select>
                         </div>
                     </div>
                     <a href="" class="filterButton">Filter</a>

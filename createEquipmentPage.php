@@ -26,7 +26,7 @@ require_once 'dbConnection.php';
 <body>
     <header class="mainTitle">
         <div>
-            MACHCARE
+            EQARE
         </div>
     </header>
 

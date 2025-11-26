@@ -14,7 +14,7 @@ require_once 'dbConnection.php';
 
 <head>
 	<meta charset="utf-8">
-	<title>MACHCARE</title>
+	<title>EQARE</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
 
@@ -22,7 +22,7 @@ require_once 'dbConnection.php';
 
 	<header class="mainTitle">
 		<div>
-			MACHCARE
+			EQARE
 		</div>
 	</header>
 

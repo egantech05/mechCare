@@ -1,7 +1,7 @@
 <?php
 require_once 'dbConnection.php'; 
 
-    $listName = $conn->query("SELECT name FROM equipmentDB;");
+    $listName = $conn->query("SELECT DISTINCT name FROM equipmentDB;");
 
 	 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$activity = $_POST['activity'] ?? null;
@@ -31,7 +31,7 @@ require_once 'dbConnection.php';
 <body>
     <header class="mainTitle">
         <text>
-            MACHCARE
+            EQARE
         </text>
     </header>
 
