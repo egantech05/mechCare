@@ -1,6 +1,5 @@
 <?php
 require_once 'dbConnection.php'; 
-     $logList =  $conn->query("SELECT * FROM logDB;");
 
 	 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$name = $_POST['name'] ?? null;

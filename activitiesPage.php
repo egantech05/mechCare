@@ -1,6 +1,6 @@
 <?php
 require_once 'dbConnection.php'; 
-     $logList =  $conn->query("SELECT * FROM logDB;");
+     $logList =  $conn->query("SELECT * FROM logDB ORDER by date DESC;");
 
 ?>
 
