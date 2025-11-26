@@ -141,7 +141,6 @@ body {
 
 .recentLogCard {
 	background-color: #1E1E1E;
-	height: 80px;
 	border-radius: 16px;
 	margin: 8px;
 	padding: 16px;
@@ -185,3 +184,65 @@ body {
 	height: 600px;
 	overflow: hidden;
 }
+
+/*acitivities page*/
+
+.filterBox {
+	margin-top: 16px;
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+
+}
+
+
+.filterComponent {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	margin-bottom: 16px;
+
+
+}
+
+
+
+.rightBox {
+	margin-left: 32px;
+}
+
+.filterTitle {
+	width: 160px;
+
+}
+
+.filterSelector select {
+	width: 200px;
+	font-size: 32px;
+	outline: none;
+	margin-right: 8px;
+}
+
+.filterButton {
+	display: block;
+	background-color: #31FFD2;
+	color: #1E1E1E;
+	padding: 16px;
+	border-radius: 16px;
+	margin-top: 16px;
+	text-align: center;
+	text-decoration: none;
+
+}
+
+.filterResults {
+	background-color: #D9D9D9;
+	padding: 8px;
+	margin-top: 16px;
+	border-radius: 16px;
+	height: 450px;
+	overflow: hidden;
+
+}
+
+.logNote {}
