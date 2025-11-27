@@ -21,61 +21,30 @@ if ($search !== ''){
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>EQARE</title>
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css">
 </head>
 
+
 <body>
 
-    <header class="mainTitle">
-        <div>
-            EQARE
-        </div>
-    </header>
+	<header class="mainTitle"
+        style="display:flex;
+               align-items:center;
+               justify-content:space-between;
+               padding:16px;
+               background-color:#1E1E1E;
+               color:#31FFD2;
+               font-size:32px;
+               font-weight:bold;
+			   border-radius:16px;">
+		<div>
+			EQARE
+		</div>
+		<img class="bulb" src="img/bulb.svg" style="display:block; height:32px;" />
+	</header>
 
-	<div class="navigationRow">
-		<a href="index.php" style="text-decoration: none;">
-			<div class="navButton">
-				<div class="navButtonComponents">
-					<img src="img/dashboard.svg" />
-					<div class="navText"> Dashboard</div>
-				</div>
-			</div>
-		</a>
-		<a href="equipmentPage.php" style="text-decoration: none;">
-			<div class="navButton">
-				<div class="navButtonComponents">
-					<img src="img/equipment.svg" />
-					<div class="navText"> Equipment</div>
-				</div>
-			</div>
-		</a>
-		<a href="activitiesPage.php" style="text-decoration: none;">
-			<div class="navButton">
-				<div>
-					<img src="img/activities.svg" />
-					<div class="navText"> Activities</div>
-				</div>
-			</div>
-		</a>
-		<a href="createLogPage.php" style="text-decoration: none;">
-			<div class="navButton">
-				<div>
-					<img src="img/create-log.svg" />
-					<div class="navText"> Create Log</div>
-				</div>
-			</div>
-		</a>
-		<a href="createEquipmentPage.php" style="text-decoration: none;">
-			<div class="navButton">
-				<div>
-					<img src="img/create-equipment.svg" />
-					<div class="navText"> Create Equipment</div>
-				</div>
-			</div>
-		</a>
-	</div>
+	<div id="navBar"></div>
 
 
     <div class="content">
@@ -118,7 +87,23 @@ if ($search !== ''){
         </div>
     </div>
 
+    <script>
+     
+        async function loadNavBar(file){
+            const res=await fetch(file);
+            const html= await res.text();
+            document.getElementById('navBar').innerHTML=html;
+        }
 
+        loadNavBar("nav.html");
+		const changeTheme = document.querySelector('.bulb');
+		let toggle = false;
+
+		changeTheme.addEventListener('click', () => {
+			toggle = !toggle;
+			document.body.style.backgroundColor = toggle ? '#1E1E1E' : '#ffffff';
+		});
+    </script>
 
 
 </body>
