@@ -1,19 +1,27 @@
 <?php
 require_once 'dbConnection.php'; 
 
-	 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-		$name = $_POST['name'] ?? null;
-		$model= $_POST['model'] ?? null;
-		$manufacturer = $_POST['manufacturer'] ?? null;
-		$type = $_POST['type'] ?? null;
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = $_POST['name'] ?? null;
+    $model = $_POST['model'] ?? null;
+    $manufacturer = $_POST['manufacturer'] ?? null;
+    $type = $_POST['type'] ?? null;
 
-		$stmt = $conn->prepare("INSERT INTO equipmentDB(name,model,manufacturer,type) VALUES (?,?,?,?)");
-		$stmt->bind_param("ssss",$name,$model,$manufacturer,$type);
-		$stmt->execute();
+    $stmt = $conn->prepare(
+        "INSERT INTO equipmentDB(name, model, manufacturer, type) VALUES (?, ?, ?, ?)"
+    );
 
-		header('Location: equipmentPage.php');
-		exit;
-	}	
+    $stmt->execute([
+        $name,
+        $model,
+        $manufacturer,
+        $type
+    ]);
+
+    header('Location: equipmentPage.php');
+    exit;
+}
+?>	
 	
 ?>
 <!DOCTYPE html>

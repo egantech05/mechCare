@@ -1,19 +1,26 @@
 <?php
 require_once 'dbConnection.php'; 
 
+// 1) Read search term from GET
+$search = $_GET['searchEquipment'] ?? '';
 
-$search= $_GET['searchEquipment'] ?? '';
+// 2) Run the correct SELECT query using PDO
+if ($search !== '') {
+    $stmt = $conn->prepare(
+        "SELECT * FROM equipmentDB
+         WHERE name LIKE :term
+            OR model LIKE :term
+            OR manufacturer LIKE :term
+            OR type LIKE :term"
+    );
 
-if ($search !== ''){
-    $filter=$conn->prepare("SELECT * FROM equipmentDB WHERE name LIKE ? OR model LIKE ? OR manufacturer LIKE ? OR type LIKE ? ");
-    $like = "%{$search}%";
-    $filter->bind_param("ssss", $like,$like,$like,$like);
-    $filter->execute();
-    $equipmentList = $filter->get_result();
-} else{
-     $equipmentList =  $conn->query("SELECT * FROM equipmentDB;");
+    $term = '%' . $search . '%';
+    $stmt->execute([':term' => $term]);
+    $equipmentList = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} else {
+    $stmt = $conn->query("SELECT * FROM equipmentDB");
+    $equipmentList = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-
 ?>
 
 <!DOCTYPE html>
